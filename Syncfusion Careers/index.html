@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>JavaScript Validation</title>
+        <script src="script/script.js"></script>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <h1>Submit your application</h1>
+        <h4>Personal Information</h4>
+        <form action="return display()">
+            <p><label for="Name">Name as per Id proof 
+                <span class="asterik">*</span></label>
+                <span id="NameWarning1" style="visibility: hidden;">Name is Required</span>
+                <span id="NameWarning2" style="visibility: hidden;">Required a valid name</span><br>
+            <input onmouseout="unamedisplay()" type="text" id="username" placeholder="Enter your UserName" ></p>
+
+
+
+
+
+            <p><label for="Father Name">Father's name <span class="asterik">*</span></label>
+                <span id="FatherNameWarning1" style="visibility: hidden;">Father Name is Required</span>
+                <span id="FatherNameWarning2" style="visibility: hidden;">Required a valid father name</span><br>
+                <input onmouseout="fnamedisplay()" type="text" id="fathername" placeholder="Enter your FatherName" ></p>
+
+
+
+
+
+            <p><label for="Email">Email <span class="asterik">*</span></label>
+                <span id="mailWarning1" style="visibility: hidden;">Email is Required</span>
+                <span id="mailWarning2" style="visibility: hidden;">Required a valid mail</span><br>
+            <input onmouseout="mailDisplay()" type="email" id="email" placeholder="enter your mail id">
+            </p>
+
+
+
+
+
+            <p><label for="DOB">Date of Birth <span class="asterik">*</span></label><br>
+                <input onclick="DOBDisplay()" type="text" id="DOB" placeholder="DD-MM-YYYY">
+                </p>
+
+
+
+
+
+                <p><label for="Mobile Number">Mobile Number <span class="asterik">*</span></label><br>
+                    <input onmouseout="MobileNumberDisplay()" type="text" id="MobileNumber" placeholder="MobileNumber">
+                    </p>
+
+
+            <p><label for="Address">Current Address <span class="asterik">*</span></label><br>
+                <input onmouseout="Address1display()" type="text" id="Address1" placeholder="Address Line1"><br><br>
+                <input onmouseout="Address2display()" type="text" id="Address2" placeholder="Address Line2"><br><br>
+                <input onmouseout="Address3display()" type="text" id="Address3" placeholder="Address Line3"> <br><br>
+            <select name="State" id="State" onclick="Address3display()">
+                <option value="TamilNadu">TamilNadu</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="telengana">telengana</option>
+            </select></p>
+
+
+                <p>
+<input onmouseout="PINDisplay()" type="text" id="PINCode" placeholder="Zip code">
+                </p>
+
+                <p><label for="PAddress">Permanent Address <span class="asterik">*</span> <input type="checkbox" onclick="EqualAddressDisplay()" id="EqualAddress">Same as current Address</label><br>
+                    <input type="text" id="PermanentAddress1" placeholder="Address Line1"><br><br>
+                    <input type="text" id="PermanentAddress2" placeholder="Address Line2"><br><br>
+                    <input type="text" id="PermanentAddress3" placeholder="Address Line3"> <br><br>
+                <select name="State"  id="PermanentAddress4">
+                    <option value="TamilNadu">TamilNadu</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="telengana">telengana</option>
+                </select></p>
+                <input type="text" id="PermanentPINCode" placeholder="Zip code">
+                <p>Upload Profile Photo<span class="asterik">*</span>(JPG/PNG format only)<br>
+                Please Upload a Photo of yourself. Your face should be clearly visible. Make sure the image size does not exceed 500KB</p>
+                <button onclick="photoUploads()" id="photoUpload">UPLOAD PHOTO</button><span id="photoWarning" style="visibility: hidden;color: red;">Upload your profile photo</span><br><br>
+                <button style="background-color: blue;color: white;">Next</button>
+
+
+        </form>
+
+    </body>
+</html>
